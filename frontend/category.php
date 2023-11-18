@@ -13,7 +13,7 @@
 				<!-- /row -->
 			</div>
 			<!-- /container -->
-		</div>
+</div>
 		<!-- /BREADCRUMB -->
         <!-- SECTION -->
 		<div class="section">
@@ -85,7 +85,8 @@
 										<option value="1">Giá cao</option>
                                         <option value="2">Giá thấp</option>
 									</select>
-								</label></div>
+								</label>
+							</div>
                                         <!--
 								<label>
 									Show:
@@ -108,9 +109,8 @@
 							
 							<!-- /product -->
 
-								
-							
 						</div>
+						
 						<!-- /store products -->
 
 						<!-- store bottom filter -->

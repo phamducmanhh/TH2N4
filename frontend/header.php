@@ -53,7 +53,7 @@
 										?>
 									</select>
 									<input class="input" name="search" placeholder="Tên sản phẩm......" required>
-									<button class="search-btn">Tìm</button>
+									<button class="search-btn" style=""><i class="fa-solid fa-magnifying-glass"></i></button>
 								</form>
 							</div>
 						</div>
