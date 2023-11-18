@@ -62,7 +62,8 @@
                                         $ten_sp=executeSingleResult('SELECT sanpham.ten_sp FROM cthoadon, sanpham WHERE cthoadon.id_sanpham=sanpham.id AND id_hoadon='.$value['id'].' LIMIT 0, 1')['ten_sp'];
                                         $sl_sp=executeSingleResult('SELECT COUNT(id_sanpham) AS sl_sp FROM cthoadon WHERE id_hoadon='.$value['id'])['sl_sp'];
                                         if($sl_sp>1) $ten_sp=$ten_sp.', ... và '.($sl_sp-1).' sản phẩm khác.';
-                                        echo '<tr height=80px>
+                                        echo '
+                                        <table class="table table-striped"> <tr height=80px>
                                         <td align=center ><a href="index.php?act=bill_detail&id='.$value['id'].'"><strong style="color:deepskyblue;"><u>HĐ'.$value['id'].'</u></strong></a></td>
                                         <td>'.$value['ngay_tao'].'</td>
                                         <td>'.$ten_sp.'</td>
@@ -74,7 +75,7 @@
                                              else {
                                                  echo '<td align=center style="color:#07ea03">Thành công</td><td></td>';}
                                         
-                                    echo'</tr>';
+                                    echo'</tr></table>';
                                     }
                                 ?>
 
