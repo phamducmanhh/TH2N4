@@ -50,14 +50,13 @@
                     <table class="table table-bordered table-striped table-hover">
                         <thead >
                             <tr>
-                                <th>Id<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=idgiam"><i class="fa fa-arrow-down"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=idtang"><i class="fa fa-arrow-up"></i></a></th>
-                                <th>Ảnh </th>
-                                <th>Tên sản phẩm<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tengiam"><i class="fa fa-arrow-down"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tentang"><i class="fa fa-arrow-up"></i></a></th>
-                                <th>Số lượng tồn<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tongiam"><i class="fa fa-arrow-down"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tontang"><i class="fa fa-arrow-up"></i></a></th>
-                                <th>Số lượng bán<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=bangiam"><i class="fa fa-arrow-down"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=bantang"><i class="fa fa-arrow-up"></i></a></th>
-                                <th>Trạng thái</th>
-                                <th>Sửa</th>
-                                <th>Xóa</th>
+                                <th style="text-align:center">ID<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=idgiam"></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=idtang"></i></a></th>
+                                <th style="text-align:center">Ảnh </th>
+                                <th style="text-align:center">Tên sản phẩm<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tengiam"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tentang"></i></a></th>
+                                <th style="text-align:center">Số lượng tồn<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tongiam"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=tontang"></i></a></th>
+                                <th style="text-align:center">Số lượng bán<a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=bangiam"></i></a><a href="./admin.php?muc=4&tmuc=Sản%20phẩm&sapxep=bantang"></i></a></th>
+                                <th style="text-align:center">Trạng thái</th>
+                                <th style="text-align:center">Quản lý</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,15 +64,15 @@
                             while ($row = mysqli_fetch_array($products)) {
                             ?>
                                 <tr>         
-                                    <td><?= $row['id'] ?></td>                     
+                                    <td style="text-align:center; padding-top: 50px"><?= $row['id'] ?></td>                     
                                     <td><img style="width: 100px;height: 100px " src="../img/<?= $row['hinh_anh'] ?>"  /></td>
-                                    <td><?= $row['ten_sp'] ?></td>
-                                    <td><?= $row['so_luong'] ?>
+                                    <td style="text-align:center; padding-top: 50px"><?= $row['ten_sp'] ?></td>
+                                    <td style="text-align:center; padding-top: 50px"><?= $row['so_luong'] ?>
                                     </td>
-                                    <td><?= $row['sl_da_ban'] ?></td>
-                                    <td><?php if($row['trangthai']=='0')echo "Hiển thị";else echo "Bị ẩn" ?></td>
-                                    <td><a href="admin.php?act=sua&id=<?= $row['id'] ?>">Sửa</a></td>
-                                    <td><?php if($row['trangthai']=='1'){?><a href="admin.php?act=xoa&id=<?= $row['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');">Xóa</a><?php }?></td>                                  
+                                    <td style="text-align:center; padding-top: 50px"><?= $row['sl_da_ban'] ?></td>
+                                    <td style="text-align:center; padding-top: 50px"><?php if($row['trangthai']=='0')echo "Hiển thị";else echo "Bị ẩn" ?></td>
+                                    <td style="text-align:center; padding-top: 50px"><a href="admin.php?act=sua&id=<?= $row['id'] ?>">Sửa</a></td>
+                                    <td style="text-align:center; padding-top: 50px"><?php if($row['trangthai']=='1'){?><a href="admin.php?act=xoa&id=<?= $row['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?');">Xóa</a><?php }?></td>                                  
                                     <div class="clear-both"></div>
                                 </tr><?php } ?>
                         </tbody>

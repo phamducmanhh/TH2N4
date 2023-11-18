@@ -17,22 +17,28 @@ unset($_SESSION['cart']);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <!-- <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fontawesome-all.css">
     <link rel="stylesheet" href="./css/style2.css">
     <style>
+        
         html,
         body {
             height: 100%;
         }
 
         body {
+            background-image: url("img/dn.jpg");
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        .wrapper{
+            
         }
         .splash-container {
             width: 400px;
@@ -84,24 +90,28 @@ unset($_SESSION['cart']);
         }
     }
     ?>
-    <div class="card-header text-center">Đăng nhập</div>
-    <div class="splash-container">
-        <div class="card ">
-            <div class="card-body">
-                <form action="xulydangnhap.php" method="POST">
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" name="username" type="text" placeholder="Username" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" name="password" type="password" placeholder="Password">
-                    </div>
-                    <input type="submit" class="btn btn-primary btn-lg btn-block"></input>
-                </form>
-                <div id="dntb" >Đăng nhập thất bại</div>
-                <div id="dnbk" >Tài khoản đã bị khóa</div>
+    <div class="wrapper" style="border: 1px solid #ddd; background: rgba(0,0,0,0.5);">
+        <div class="card-header text-center" style="background:none; border-bottom: 1px solid #ddd ;font-weight: bold; font-size: 24px">Đăng nhập</div>
+        <div class="splash-container">
+            <div class="card ">
+                <div class="card-body">
+                    <form action="xulydangnhap.php" method="POST">
+                        <div class="form-group">
+                            <input style="background: rgba(0,0,0,0.5);" class="form-control form-control-lg" name="username" type="text" placeholder="Username" autocomplete="off">
+                            
+                        </div>
+                        <div class="form-group">
+                            <input style="background: rgba(0,0,0,0.5);" class="form-control form-control-lg" name="password" type="password" placeholder="Password">
+                        </div>
+                        <input type="submit"  style="background: rgba(0,0,0,0.5);" class="btn btn-primary btn-lg btn-block" value="Đăng nhập"></input>
+                    </form>
+                    <div id="dntb" >Đăng nhập thất bại</div>
+                    <div id="dnbk" >Tài khoản đã bị khóa</div>
+                </div>
             </div>
         </div>
     </div>
+    
 
     <!-- ============================================================== -->
     <!-- end login page  -->
