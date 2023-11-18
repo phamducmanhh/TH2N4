@@ -1,52 +1,57 @@
 <!-- BREADCRUMB -->
 <div id="breadcrumb" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						
-						<ul class="breadcrumb-tree">
-							<li><a href="index.php">Trang chủ</a></li>
-							<li class="active">Đơn hàng của tôi</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /BREADCRUMB -->
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+
+                <ul class="breadcrumb-tree">
+                    <li><a href="index.php">Trang chủ</a></li>
+                    <li class="active">Đơn hàng của tôi</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /BREADCRUMB -->
 <!-- ĐƠN HÀNG CỦA TÔI -->
 <div class="container">
     <div class="row">
         <div class="col col-lg-3 col-sm-12">
             <div class="row">
-                <p>Tài khoản của<p>
-                <strong><?=$_SESSION['ten_dangnhap']?></strong>
+                <p>Tài khoản
+                <p>
+                    <strong><?=$_SESSION['ten_dangnhap']?></strong>
             </div>
             <div>
-                
+
                 <ul class="footer-links">
-									<li><a href="?act=my_account"><i class="fa fa-user-o" style="color:black;"></i>Tài Khoản Của Tôi</a></li>
-									<li ><a href="?act=my_bill" style="color:#D10024;"><i class="fa fa-bars" style="color:black;"></i>Đơn Hàng Của Tôi</a></li>
-									
-								</ul>
+                    <li><a href="?act=my_account"><i class="fa fa-user-o" style="color:black;"></i> Tài Khoản Của
+                            Tôi</a>
+                    </li>
+                    <li><br></li>
+                    <li><a href="?act=my_bill" style="color:#D10024;"><i class="fa fa-bars" style="color:black;"></i>
+                            Đơn Hàng Của Tôi</a></li>
+
+                </ul>
             </div>
         </div>
         <div class="col col-lg-9 col-sm-12">
-                            <div class="section-title">
-								<h3 class="title">Đơn hàng của tôi</h3>
-							</div>
-                            <table width=100%>
-                                <tr>
-                                    <th style="text-align:center;">Mã đơn hàng</th>
-                                    <th>Ngày mua</th>
-                                    <th>Sản phẩm</th>
-                                    <th>Tổng tiền</th>
-                                    <th style="text-align:center">Trạng thái đơn hàng</th>
-                                </tr>
-                                <?php
+            <div class="section-title">
+                <h3 class="title">Đơn hàng của tôi</h3>
+            </div>
+            <table width=100%>
+                <tr>
+                    <th style="text-align:center;">Mã đơn hàng</th>
+                    <th>Ngày mua</th>
+                    <th>Sản phẩm</th>
+                    <th>Tổng tiền</th>
+                    <th style="text-align:center">Trạng thái đơn hàng</th>
+                </tr>
+                <?php
                                     $sql='SELECT * from hoadon where id_khachhang='.$info['id'].' ORDER BY hoadon.ngay_tao DESC';
                                     $listBill=executeResult($sql);
                                     
@@ -72,8 +77,8 @@
                                     echo'</tr>';
                                     }
                                 ?>
-                                
-                            </table>
+
+            </table>
         </div>
     </div>
 </div>
