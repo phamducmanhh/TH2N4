@@ -860,8 +860,9 @@ textarea.input {
 
 .product .product-img .product-label {
   position: absolute;
-  top: 15px;
+  top: 6px;
   right: 15px;
+  left: 0px;
 }
 
 .product .product-img .product-label>span {
@@ -877,9 +878,10 @@ textarea.input {
 }
 
 .product .product-img .product-label>span.new {
-  background-color: #D10024;
-  border-color: #D10024;
+  background-color: #d18700;
+  border-color: #eea10b;
   color: #FFF;
+  font-weight: 600;
 }
 
 .product .product-body {
@@ -936,7 +938,7 @@ textarea.input {
 }
 
 .product .product-body .product-rating>i.fa-star {
-  color: #ef233c;
+  color: #ecae03;
 }
 
 .product .product-body .product-rating:after {

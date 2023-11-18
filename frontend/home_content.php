@@ -151,6 +151,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<!-- Products tab & slick -->
 				</div>
 				<!-- /row -->

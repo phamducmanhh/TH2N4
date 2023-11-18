@@ -5,12 +5,10 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<ul class="breadcrumb-tree">
-							<li><a href="index.php">Trang Chủ</a></li>
-							<li><a href="?act=category">Danh Mục Sản Phẩm</a></li>
-							<li class="active"><?php echo ($id==0) ? '' : $title;?></li>
-						</ul>
+						<img src="./img/cb.jpg" alt="Your Banner" style="width: 100%; height: 500px; display: inline-block; border-top-left-radius: 100px 100px; border-bottom-right-radius: 100px 100px; " class="img-fluid"> <!-- Thêm thuộc tính "display: inline-block;" -->
+
 					</div>
+					
 				</div>
 				<!-- /row -->
 			</div>
@@ -47,27 +45,7 @@
 						<!-- /aside Widget -->
 
 						<!-- aside Widget -->
-						<div class="aside">
-							<h3 class="aside-title">Giá</h3>
-							<small>Chọn khoảng giá</small><br><br>
-							<div class="price-filter">
-							
-								<div id="price-slider"></div>
-								<div class="input-number price-min">
-									<input id="price-min" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<span>-</span>
-								<div class="input-number price-max">
-									<input id="price-max" type="number">
-									<span class="qty-up">+</span>
-									<span class="qty-down">-</span>
-								</div>
-								<br/><br>
-								<button class="btn" id="btn_gia">Áp Dụng</button>
-							</div>
-						</div>
+						
 						<!-- /aside Widget -->
 
 						<!-- aside Widget -->

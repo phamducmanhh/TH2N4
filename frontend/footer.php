@@ -1,9 +1,10 @@
 <style>
 	#footer {
+    margin-top: 20px;
 	background-color: #34495e;
     color: #ecf0f1;
     padding: 20px 0;
-    margin-top: auto;
+    margin-top: 40px;
     width: 100%;
     transition: background-color 0.3s ease;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
