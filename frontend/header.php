@@ -52,8 +52,12 @@
 										}
 										?>
 									</select>
-									<input class="input" name="search" placeholder="Tên sản phẩm......" required>
-									<button class="search-btn" style=""><i class="fa-solid fa-magnifying-glass"></i></button>
+									<input class="input" name="search" id="search-input" placeholder="Tên sản phẩm......" required>
+						                        <span class="microphone">
+						                            <i class="fa fa-microphone"></i>
+						                            <span class="recording-icon"></span>
+						                        </span>
+						                        <button class="search-btn">Tìm</button>
 								</form>
 							</div>
 						</div>
