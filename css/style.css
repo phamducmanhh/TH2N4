@@ -2181,3 +2181,60 @@ textarea.input {
     margin-top: 10px;
   }
 }
+/* Style the microphone icon container */
+.microphone {
+  position: relative;
+}
+
+.microphone i.fa-microphone {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the recording icon */
+.recording-icon {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #e22d2d;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite linear;
+  display: none;
+}
+
+/* Hide the microphone icon and show the recording icon when recording */
+.microphone.recording .recording-icon {
+  display: inline-block;
+}
+
+.microphone.recording .fa-microphone {
+  display: none;
+}
+
+/* Style the search button */
+.search-btn {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Add a pulsating animation to the recording icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
