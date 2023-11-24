@@ -87,14 +87,14 @@
 						</div>
 						
 						
-						<button id="btnThanhToanThanhCong"style="width:100% ;display:none;" class="btn-success btn order-submit" >ĐẶT HÀNG THÀNH CÔNG</button>
-						<?php if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+						
+						<?php 
+						if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
 							if(isset($_SESSION['ten_dangnhap']) && !empty($_SESSION['ten_dangnhap']))
-								echo '<button style="width:100%" onclick="thanhtoan(\''.$_SESSION['ten_dangnhap'].'\'); thanhToanThanhCong();" class="primary-btn order-submit" >Tiến Hành THanh Toán</button>';
-								else echo '<button style="width:100%" class="primary-btn order-submit" >Vui Lòng đăng nhập để Tiến Hành THanh Toán</button>';
-							//<a href="frontend/thanh_toan.php" class="primary-btn order-submit" >Tiến Hành THanh Toán</a>
+							echo '<a href="frontend/thanh_toan.php" class="primary-btn order-submit" >Tiến Hành Thanh Toán</a>';
+							else echo '<button style="width:100%" class="primary-btn order-submit" >Vui Lòng đăng nhập để Tiến Hành Thanh Toán</button>';
 						}
-							?>
+						?>
 					</div>
 					<!-- /Order Details -->
 				</div>
