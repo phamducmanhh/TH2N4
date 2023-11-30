@@ -4,8 +4,7 @@ session_start();
     if(isset($_SESSION['ten_dangnhap'])){
         $ten_dangnhap=$_SESSION['ten_dangnhap'];
         $sql='select * from khachhang where ten_dangnhap="'.$ten_dangnhap.'"';
-        // Tạo ID đơn hàng
-        $id_hoadon = executeSingleResult('SELECT id FROM hoadon ORDER BY ngay_tao DESC LIMIT 0, 1')['id'] + 1;
+       
         $tong_tien=0;
         $infoCus=executeSingleResult($sql);
         if(isset($_SESSION['cart'])) $cart=$_SESSION['cart'];
@@ -20,23 +19,23 @@ session_start();
         foreach ($cart as $item) {
         $totalPriceAll += $item['qty'] * $item['price'];
         }
-        if(isset($_POST['thanh_toan'])){
-        date_default_timezone_set("Asia/Ho_Chi_Minh");
+        // Tạo ID đơn hàng
         $ngay_tao_HD=date('Y/m/d H:i:s');
+        $id_hoadon = executeSingleResult('SELECT id FROM hoadon ORDER BY ngay_tao DESC LIMIT 0, 1')['id'] + 1;
         $sql='insert into hoadon (id_khachhang, tong_tien, ngay_tao) value ("'.$infoCus['id'].'", "'.$totalPriceAll.'", "'.$ngay_tao_HD.'")';
         execute($sql);
-        $id_hoadon=executeSingleResult('SELECT id FROM hoadon ORDER BY ngay_tao DESC LIMIT 0, 1')['id'];
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
+        
+        
+        
         foreach($cart as $key => $value){
-            execute('INSERT INTO cthoadon (id_hoadon, id_sanpham, so_luong) VALUE ("'.$id_hoadon.'", "'.$key.'", "'.$value['qty'].'")');
+           
             $sl=executeSingleResult('SELECT so_luong FROM sanpham WHERE id='.$key)['so_luong'];
             $sldabancu=executeSingleResult('SELECT sl_da_ban FROM sanpham WHERE id='.$key)['sl_da_ban'];
             execute('UPDATE sanpham SET so_luong="'.($sl-$value['qty']).'", sl_da_ban="'.($value['qty']+$sldabancu).'" WHERE id='.$key);
-            
-        }}
-        // Lưu chi tiết đơn hàng
-        // foreach ($cart as $key => $value) {
-        // execute('INSERT INTO cthoadon (id_hoadon, id_sanpham, so_luong) VALUE ("'.$id_hoadon.'", "'.$key.'", "'.$value['qty'].'")');
-        // }
+            execute('INSERT INTO cthoadon (id_hoadon, id_sanpham, so_luong) VALUE ("'.$id_hoadon.'", "'.$key.'", "'.$value['qty'].'")');
+
+        }
 
         // Cập nhật số lượng sản phẩm
         foreach ($cart as $key => $value) {
@@ -54,7 +53,7 @@ session_start();
             execute('UPDATE theloai SET tong_sp="'.$tongSPtheoTheLoai.'" WHERE id='.$item['id']);
         }
         // Lấy giỏ hàng từ phiên
-        $cart = $_SESSION['cart'];
+        // $cart = $_SESSION['cart'];
 
         // Tạo một phiên mới
         // session_regenerate_id();
