@@ -38,7 +38,7 @@ if (isset($_SESSION['ten_dangnhap'])) {
   $id_hoadon = executeSingleResult('SELECT id FROM hoadon ORDER BY ngay_tao DESC LIMIT 0, 1')['id'] + 1;
 
   // Lưu đơn hàng vào cơ sở dữ liệu
-//   execute('INSERT INTO hoadon (id, id_khachhang, tong_tien, ngay_tao) VALUES (' . $id_hoadon . ', ' . $infoCus['id'] . ', ' . $tong_tien . ', "' . date('Y/m/d H:i:s') . '")');
+execute('INSERT INTO hoadon (id, id_khachhang, tong_tien, ngay_tao) VALUES (' . $id_hoadon . ', ' . $infoCus['id'] . ', ' . $tong_tien . ', "' . date('Y/m/d H:i:s') . '")');
 
   // Lưu chi tiết đơn hàng vào cơ sở dữ liệu
   foreach ($listProduct as $key => $value) {
